@@ -24,7 +24,7 @@ module.exports = {
     // '@typescript-eslint/no-empty-interface': 'off',
     // '@typescript-eslint/no-non-null-assertion': 'off',
     // '@typescript-eslint/explicit-module-boundary-types': 'off',
-    semi: ['error', 'never'],
+    semi: ['error', 'always'],
     'sort-imports': [
       'off',
       {
@@ -37,4 +37,4 @@ module.exports = {
     es6: true,
     node: true
   }
-}
+};
