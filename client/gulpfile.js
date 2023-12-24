@@ -1,7 +1,6 @@
 'use strict';
 
 import gulp from 'gulp';
-
 import browserSync from 'browser-sync';
 const browsersync = browserSync.create();
 import htmlMin from 'gulp-htmlmin';
