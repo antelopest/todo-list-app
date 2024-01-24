@@ -62,10 +62,11 @@ gulp.task("server:init", function (done) {
 });
 
 gulp.task("reload", function (done) {
-    browsersync.reload();
+    browserSync.reload();
 
     done();
 });
+
 
 gulp.task("html:build", function () {
     return gulp.src(path.html.src)
@@ -105,12 +106,6 @@ gulp.task("fonts:build", function () {
        .pipe(browserSync.stream());
 });
 
-gulp.task("reload", function (done) {
-   browserSync.reload();
-
-   done();
-});
-
 gulp.task("watch", function () {
     gulp.watch(path.fonts.src, gulp.series("fonts:build", "reload"));
     gulp.watch(path.images.src, gulp.series("images:build", "reload"));
@@ -118,7 +113,6 @@ gulp.task("watch", function () {
     gulp.watch(path.styles.src, gulp.series("css:build", "reload"));
     gulp.watch(path.html.src, gulp.series("html:build", "reload"));
 });
-
 
 const build = ["fonts:build", "js:build", "css:build", "html:build", "images:build"];
 const watch = gulp.parallel("server:init", "watch");
